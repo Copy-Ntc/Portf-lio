@@ -4,8 +4,6 @@ Site pessoal para apresentar minha trajetória, projetos e formação em tecnolo
 Construído do zero em HTML, CSS e JavaScript puros, sem frameworks ou build step,
 um único arquivo, fácil de hospedar em qualquer lugar.
 
-🔗 **Site no ar:** https://SEU_USUARIO.github.io/NOME_DO_REPOSITORIO/
-
 ## Sobre o projeto
 
 Este portfólio foi pensado pra ir além de uma lista de tecnologias: o objetivo é
