@@ -45,6 +45,7 @@ Recursos implementados:
 
 ```
 /
+├── assets/
 ├── index.html     # site completo (HTML + CSS + JS em um único arquivo)
 └── README.md
 ```
