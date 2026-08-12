@@ -7,10 +7,9 @@
 <meta name="description" content="Portfólio de José Leandro de Siqueira Junior, ">
 <meta name="theme-color" content="#08090B">
 
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="José Leandro - Portfólio">
-<meta property="og:description" content="Estudante, atualmente em busca de uma nova oportunidade profissional.">
+<meta property="og:description" content="Estudante de Engenharia de Software no Inatel, atualmente em busca de uma nova oportunidade profissional.">
 <meta property="og:locale" content="pt_BR">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2308090B'/%3E%3Ctext x='50' y='66' font-family='monospace' font-size='52' font-weight='700' fill='%233B82F6' text-anchor='middle'%3EJ%3C/text%3E%3C/svg%3E">
@@ -20,9 +19,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-/* ==========================================================================
-   TOKENS
-   ========================================================================== */
+
 :root{
   --bg: #08090B;
   --bg-soft: #0B0D10;
@@ -44,7 +41,6 @@
   --warning: #FBBF24;
   --warning-dim: rgba(251,191,36,.12);
 
-  /* Tons exclusivos do cartão perfil.json — deliberadamente distintos do --accent usado no resto do site */
   --json-key: #7DD3FC;
   --json-value: #A5B4FC;
 
@@ -65,9 +61,6 @@
   :root{ --section-pad: 96px; }
 }
 
-/* ==========================================================================
-   RESET
-   ========================================================================== */
 *, *::before, *::after{ box-sizing: border-box; margin:0; padding:0; }
 html{ scroll-behavior: smooth; }
 body{
@@ -96,9 +89,6 @@ h1,h2,h3,h4{ font-weight: 700; letter-spacing: -0.02em; line-height:1.1; }
   *{ animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
 }
 
-/* ==========================================================================
-   LAYOUT HELPERS
-   ========================================================================== */
 .container{
   max-width: var(--container);
   margin: 0 auto;
@@ -141,7 +131,6 @@ section{ padding: var(--section-pad) 0; position: relative; }
   max-width: 560px;
 }
 
-/* subtle dot-grid background */
 .grid-bg{
   position: absolute; inset:0;
   background-image: radial-gradient(circle, rgba(255,255,255,.06) 1px, transparent 1px);
@@ -151,7 +140,6 @@ section{ padding: var(--section-pad) 0; position: relative; }
   pointer-events: none;
 }
 
-/* reveal-on-scroll */
 .reveal{
   opacity: 0;
   transform: translateY(22px);
@@ -160,7 +148,6 @@ section{ padding: var(--section-pad) 0; position: relative; }
 .reveal.in-view{ opacity: 1; transform: translateY(0); }
 .reveal-stagger > *{ transition-delay: calc(var(--i, 0) * 70ms); }
 
-/* buttons */
 .btn{
   display:inline-flex; align-items:center; justify-content:center; gap:8px;
   font-size: 14.5px; font-weight: 600;
@@ -199,7 +186,6 @@ section{ padding: var(--section-pad) 0; position: relative; }
 .btn-ghost .arrow{ transition: transform .25s var(--ease); }
 .btn-ghost:hover .arrow{ transform: translateX(3px); }
 
-/* badges / tags */
 .badge{
   font-family: var(--font-mono);
   font-size: 12.5px;
@@ -228,9 +214,6 @@ section{ padding: var(--section-pad) 0; position: relative; }
 .status-dot.on{ background: var(--success); box-shadow: 0 0 0 3px var(--success-dim); }
 .status-dot.progress{ background: var(--warning); box-shadow: 0 0 0 3px var(--warning-dim); }
 
-/* ==========================================================================
-   NAVBAR — styled like editor tabs
-   ========================================================================== */
 .navbar{
   position: fixed; top:0; left:0; right:0; z-index: 1000;
   border-bottom: 1px solid transparent;
@@ -314,9 +297,6 @@ section{ padding: var(--section-pad) 0; position: relative; }
   .nav-actions .btn-secondary{ display:none; }
 }
 
-/* ==========================================================================
-   HERO
-   ========================================================================== */
 .hero{
   padding-top: calc(var(--section-pad) + 40px);
   padding-bottom: var(--section-pad);
@@ -381,7 +361,6 @@ section{ padding: var(--section-pad) 0; position: relative; }
 }
 .hero-ctas{ display:flex; align-items:center; gap: 10px; flex-wrap: wrap; }
 
-/* JSON profile card — signature element */
 .hero-card-wrap{ position:relative; }
 .hero-card{
   background: linear-gradient(180deg, var(--surface), var(--bg-soft));
@@ -436,9 +415,6 @@ section{ padding: var(--section-pad) 0; position: relative; }
 .hero-stats div{ font-family: var(--font-mono); font-size:12.5px; color: var(--text-3); }
 .hero-stats strong{ display:block; font-family: var(--font-display); font-size:22px; color: var(--text-1); font-weight:700; }
 
-/* ==========================================================================
-   SOBRE
-   ========================================================================== */
 .about-grid{
   display:grid; grid-template-columns: 1.2fr .8fr; gap: 72px;
 }
@@ -462,9 +438,6 @@ section{ padding: var(--section-pad) 0; position: relative; }
 .fact-item .label{ color: var(--text-3); font-family: var(--font-mono); font-size:12.5px; }
 .fact-item .value{ color: var(--text-1); font-weight:500; text-align:right; }
 
-/* ==========================================================================
-   TECNOLOGIAS
-   ========================================================================== */
 .tech-groups{ display:flex; flex-direction:column; gap: 34px; }
 .tech-group-title{
   font-family: var(--font-mono); font-size: 13px; color: var(--text-3);
@@ -472,9 +445,6 @@ section{ padding: var(--section-pad) 0; position: relative; }
 }
 .tech-badges{ display:flex; flex-wrap:wrap; gap:10px; }
 
-/* ==========================================================================
-   PROJETOS
-   ========================================================================== */
 .projects-grid{
   display:grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
 }
@@ -539,9 +509,6 @@ section{ padding: var(--section-pad) 0; position: relative; }
 .project-links a:hover{ color: var(--text-1); border-color: var(--accent); background: var(--accent-dim); }
 .project-links svg{ width:15px; height:15px; }
 
-/* ==========================================================================
-   EXPERIÊNCIA — timeline
-   ========================================================================== */
 .timeline{ position:relative; max-width: 780px; }
 .timeline::before{
   content:''; position:absolute; left: 7px; top:6px; bottom:6px; width:1px;
@@ -569,9 +536,6 @@ section{ padding: var(--section-pad) 0; position: relative; }
 .timeline-item li::before{ content:'—'; position:absolute; left:0; color: var(--text-3); }
 .timeline-tech{ display:flex; flex-wrap:wrap; gap:8px; }
 
-/* ==========================================================================
-   CERTIFICADOS
-   ========================================================================== */
 .cert-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 @media (max-width: 980px){ .cert-grid{ grid-template-columns: repeat(2,1fr); } }
 @media (max-width: 680px){ .cert-grid{ grid-template-columns: 1fr; } }
@@ -624,9 +588,6 @@ section{ padding: var(--section-pad) 0; position: relative; }
 .cert-meta a{ color: var(--accent-2); display:flex; align-items:center; gap:5px; }
 .cert-meta a:hover{ color: var(--accent); }
 
-/* ==========================================================================
-   CURRÍCULO
-   ========================================================================== */
 .resume-card{
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-l);
@@ -653,9 +614,6 @@ section{ padding: var(--section-pad) 0; position: relative; }
   .resume-card{ flex-direction:column; align-items:flex-start; padding: 36px 28px; text-align:left; }
 }
 
-/* ==========================================================================
-   CONTATO
-   ========================================================================== */
 .contact-grid{ display:grid; grid-template-columns: .85fr 1.15fr; gap: 60px; }
 @media (max-width: 900px){ .contact-grid{ grid-template-columns:1fr; gap:44px; } }
 
@@ -700,9 +658,6 @@ section{ padding: var(--section-pad) 0; position: relative; }
 .form-status{ font-size: 13.5px; margin-top: 12px; font-family: var(--font-mono); min-height: 18px; }
 .form-status.ok{ color: var(--success); }
 
-/* ==========================================================================
-   FOOTER
-   ========================================================================== */
 footer{
   border-top: 1px solid var(--border);
   padding: 54px 0 34px;
@@ -731,7 +686,6 @@ footer{
 }
 .footer-social a:hover{ color: var(--accent-2); border-color: var(--accent); }
 
-/* back to top */
 .to-top{
   position: fixed; right: 26px; bottom: 26px; z-index: 900;
   width: 46px; height:46px; border-radius: 50%;
@@ -744,12 +698,8 @@ footer{
 .to-top.visible{ opacity:1; transform:translateY(0); pointer-events:auto; }
 .to-top:hover{ border-color: var(--accent); background: var(--surface-2); }
 
-/* misc icon sizing */
 .icon-sm{ width:16px; height:16px; }
 
-/* ==========================================================================
-   REFINAMENTOS MOBILE
-   ========================================================================== */
 @media (max-width: 900px){
   .nav-inner{ height: 60px; }
   .logo{ font-size: 14px; }
@@ -799,7 +749,6 @@ footer{
   .to-top{ right: 16px; bottom: 16px; width: 42px; height: 42px; }
 }
 
-/* previne overflow horizontal em qualquer largura */
 html, body{ max-width: 100%; overflow-x: hidden; }
 </style>
 </head>
@@ -858,7 +807,7 @@ html, body{ max-width: 100%; overflow-x: hidden; }
         </div>
 
         <div class="hero-stats">
-          <div><strong>1+</strong>anos de prática</div>
+          <div><strong>2+</strong>anos de prática</div>
           <div><strong>6</strong>projetos publicados</div>
           <div><strong>15+</strong>tecnologias</div>
         </div>
@@ -982,7 +931,6 @@ html, body{ max-width: 100%; overflow-x: hidden; }
 
       <div class="projects-grid">
 
-        <!-- Card 7 -->
 <article class="project-card reveal">
   <div class="project-thumb" style="background:linear-gradient(135deg,#DC2626,#3B82F6);">
     <span class="glyph">BOT</span>
@@ -1013,159 +961,156 @@ html, body{ max-width: 100%; overflow-x: hidden; }
   </div>
 </article>
 
-        <!-- Card 2 -->
-        <article class="project-card reveal">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#0F766E,#3B82F6);">
-            <span class="glyph">$&nbsp;_</span>
-          </div>
-          <div class="project-top">
-            <span class="status-pill"><span class="status-dot on"></span>Concluído</span>
-            <span class="project-year">2025</span>
-          </div>
-          <div class="project-body">
-            <h3>Dashboard de Gestão Financeira Pessoal</h3>
-            <p>Aplicação web para controle de receitas e despesas, com gráficos interativos, categorização automática e metas de economia mensais.</p>
-            <div class="project-tags"><span>Web App</span><span>Frontend</span><span>Dados</span></div>
-            <div class="project-tech">
-              <span class="badge">React</span>
-              <span class="badge">Node.js</span>
-              <span class="badge">Tailwind</span>
-            </div>
-          </div>
-          <div class="project-links">
-            <a href="#" aria-label="Ver código no GitHub">
+<article class="project-card reveal">
+  <div class="project-thumb" style="background:linear-gradient(135deg,#1E3A8A,#3B82F6);">
+    <span class="glyph">{ }</span>
+  </div>
+  <div class="project-top">
+    <span class="status-pill"><span class="status-dot on"></span>Concluído</span>
+    <span class="project-year">2026</span>
+  </div>
+  <div class="project-body">
+    <h3>Automação de Relatório Financeiro</h3>
+<p>Script em Python que lê uma planilha de lançamentos e gera automaticamente um relatório em Excel formatado, com totais por categoria, por mês e gráfico, usando fórmulas nativas, não valores fixos.</p>
+    <div class="project-tags"><span>Automação</span><span>Backend</span><span>Dados</span></div>
+    <div class="project-tech">
+      <span class="badge">Python</span>
+      <span class="badge">Pandas</span>
+      <span class="badge">Excel</span>
+    </div>
+  </div>
+  <div class="project-links">
+    <a href="https://github.com/Copy-Ntc/automacao-relatorio-financeiro" target="_blank" rel="noopener" aria-label="Ver código no GitHub">
               <svg viewBox="0 0 24 24" fill="currentColor" class="icon-sm"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.32 9.32 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
               GitHub
             </a>
-            <a href="#" aria-label="Ver demonstração">
+<a href="https://github.com/Copy-Ntc/automacao-relatorio-financeiro/raw/main/relatorio_exemplo.xlsx" download aria-label="Baixar relatório de exemplo (Excel)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
               Demo
             </a>
           </div>
         </article>
 
-        <!-- Card 3 -->
-        <article class="project-card reveal">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#7C3AED,#3B82F6);">
-            <span class="glyph">API</span>
-          </div>
-          <div class="project-top">
-            <span class="status-pill"><span class="status-dot on"></span>Concluído</span>
-            <span class="project-year">2024</span>
-          </div>
-          <div class="project-body">
-            <h3>Bot de Integração via API</h3>
-            <p>Robô de automação que integra sistemas distintos via API REST, sincronizando dados em tempo real e disparando notificações automáticas.</p>
-            <div class="project-tags"><span>Automação</span><span>API</span><span>Integração</span></div>
-            <div class="project-tech">
-              <span class="badge">Python</span>
-              <span class="badge">REST API</span>
-              <span class="badge">Webhooks</span>
-            </div>
-          </div>
-          <div class="project-links">
-            <a href="#" aria-label="Ver código no GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor" class="icon-sm"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.32 9.32 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
-              GitHub
-            </a>
-            <a href="#" aria-label="Ver demonstração">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
-              Demo
-            </a>
-          </div>
-        </article>
+<article class="project-card reveal">
+  <div class="project-thumb" style="background:linear-gradient(135deg,#0F766E,#3B82F6);">
+    <span class="glyph">$&nbsp;_</span>
+  </div>
+  <div class="project-top">
+    <span class="status-pill"><span class="status-dot on"></span>Concluído</span>
+    <span class="project-year">2026</span>
+  </div>
+  <div class="project-body">
+    <h3>To-Do List Web</h3>
+    <p>Lista de tarefas simples e sem dependências, com filtros, contador em tempo real e tudo salvo automaticamente no navegador, sem precisar de backend.</p>
+    <div class="project-tags"><span>Web App</span><span>Frontend</span></div>
+    <div class="project-tech">
+      <span class="badge">HTML5</span>
+      <span class="badge">CSS3</span>
+      <span class="badge">JavaScript</span>
+    </div>
+  </div>
+  <div class="project-links">
+    <a href="https://github.com/Copy-Ntc/todo-list-web" target="_blank" rel="noopener" aria-label="Ver código no GitHub">
+      <svg viewBox="0 0 24 24" fill="currentColor" class="icon-sm"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.32 9.32 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
+      GitHub
+    </a>
+    <a href="https://copy-ntc.github.io/todo-list-web/" target="_blank" rel="noopener" aria-label="Ver demonstração">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+      Demo
+    </a>
+  </div>
+</article>
 
-        <!-- Card 4 -->
-        <article class="project-card reveal">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#B45309,#3B82F6);">
-            <span class="glyph">::</span>
-          </div>
-          <div class="project-top">
-            <span class="status-pill"><span class="status-dot progress"></span>Em desenvolvimento</span>
-            <span class="project-year">2025</span>
-          </div>
-          <div class="project-body">
-            <h3>Plataforma de Estudos com Flashcards</h3>
-            <p>Aplicação para revisão espaçada de conteúdos, com criação de baralhos personalizados, estatísticas de progresso e modo offline.</p>
-            <div class="project-tags"><span>Web App</span><span>Educação</span><span>Frontend</span></div>
-            <div class="project-tech">
-              <span class="badge">React</span>
-              <span class="badge">TypeScript</span>
-              <span class="badge">LocalStorage</span>
-            </div>
-          </div>
-          <div class="project-links">
-            <a href="#" aria-label="Ver código no GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor" class="icon-sm"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.32 9.32 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
-              GitHub
-            </a>
-            <a href="#" aria-label="Ver demonstração">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
-              Demo
-            </a>
-          </div>
-        </article>
+<article class="project-card reveal">
+  <div class="project-thumb" style="background:linear-gradient(135deg,#0891B2,#3B82F6);">
+    <span class="glyph">CSV</span>
+  </div>
+  <div class="project-top">
+    <span class="status-pill"><span class="status-dot on"></span>Concluído</span>
+    <span class="project-year">2026</span>
+  </div>
+  <div class="project-body">
+    <h3>Web Scraper de Livros</h3>
+    <p>Script em Python que coleta título, preço, avaliação e disponibilidade de um catálogo de livros e exporta os dados para CSV, com controle de intervalo entre requisições e tratamento de erros de rede.</p>
+    <div class="project-tags"><span>Automação</span><span>Dados</span><span>Web Scraping</span></div>
+    <div class="project-tech">
+      <span class="badge">Python</span>
+      <span class="badge">Requests</span>
+      <span class="badge">BeautifulSoup</span>
+    </div>
+  </div>
+  <div class="project-links">
+    <a href="https://github.com/Copy-Ntc/web-scraper-livros" target="_blank" rel="noopener" aria-label="Ver código no GitHub">
+      <svg viewBox="0 0 24 24" fill="currentColor" class="icon-sm"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.32 9.32 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
+      GitHub
+    </a>
+<a href="https://github.com/Copy-Ntc/web-scraper-livros/raw/main/exemplo_saida.csv" target="_blank" rel="noopener" aria-label="Ver exemplo de saída (CSV)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+      Demo
+    </a>
+  </div>
+</article>
 
-        <!-- Card 5 -->
-        <article class="project-card reveal">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#334155,#3B82F6);">
-            <span class="glyph">&gt;_</span>
-          </div>
-          <div class="project-top">
-            <span class="status-pill"><span class="status-dot on"></span>Concluído</span>
-            <span class="project-year">2024</span>
-          </div>
-          <div class="project-body">
-            <h3>Coleção de Scripts &amp; CLI Tools</h3>
-            <p>Repositório de utilitários de linha de comando para tarefas repetitivas: organização de arquivos, backups automáticos e limpeza de dados.</p>
-            <div class="project-tags"><span>CLI</span><span>Produtividade</span><span>Open Source</span></div>
-            <div class="project-tech">
-              <span class="badge">Python</span>
-              <span class="badge">Bash</span>
-            </div>
-          </div>
-          <div class="project-links">
-            <a href="#" aria-label="Ver código no GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor" class="icon-sm"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.32 9.32 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
-              GitHub
-            </a>
-            <a href="#" aria-label="Ver demonstração">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
-              Demo
-            </a>
-          </div>
-        </article>
+<article class="project-card reveal">
+  <div class="project-thumb" style="background:linear-gradient(135deg,#334155,#3B82F6);">
+    <span class="glyph">&gt;_</span>
+  </div>
+  <div class="project-top">
+    <span class="status-pill"><span class="status-dot on"></span>Concluído</span>
+    <span class="project-year">2026</span>
+  </div>
+  <div class="project-body">
+    <h3>Conversor de Unidades — CLI</h3>
+    <p>Ferramenta de linha de comando para converter valores entre comprimento, peso, volume e temperatura, com modo interativo e 15 testes automatizados cobrindo os cálculos e os erros de uso.</p>
+    <div class="project-tags"><span>CLI</span><span>Produtividade</span><span>Testes</span></div>
+    <div class="project-tech">
+      <span class="badge">Python</span>
+      <span class="badge">unittest</span>
+    </div>
+  </div>
+  <div class="project-links">
+    <a href="https://github.com/Copy-Ntc/conversor-unidades-cli" target="_blank" rel="noopener" aria-label="Ver código no GitHub">
+      <svg viewBox="0 0 24 24" fill="currentColor" class="icon-sm"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.32 9.32 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
+      GitHub
+    </a>
+    <a href="https://github.com/Copy-Ntc/conversor-unidades-cli#como-usar" target="_blank" rel="noopener" aria-label="Ver exemplos de uso">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+      Demo
+    </a>
+  </div>
+</article>
 
-        <!-- Card 6 -->
-        <article class="project-card reveal">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#1D4ED8,#0EA5E9);">
-            <span class="glyph">&lt;/&gt;</span>
-          </div>
-          <div class="project-top">
-            <span class="status-pill"><span class="status-dot on"></span>Concluído</span>
-            <span class="project-year">2023</span>
-          </div>
-          <div class="project-body">
-            <h3>Landing Page Institucional</h3>
-            <p>Site institucional responsivo com foco em performance e conversão, otimizado para SEO e com carregamento abaixo de 1 segundo.</p>
-            <div class="project-tags"><span>Frontend</span><span>SEO</span><span>Performance</span></div>
-            <div class="project-tech">
-              <span class="badge">HTML5</span>
-              <span class="badge">CSS3</span>
-              <span class="badge">JavaScript</span>
-            </div>
-          </div>
-          <div class="project-links">
-            <a href="#" aria-label="Ver código no GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor" class="icon-sm"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.32 9.32 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
-              GitHub
-            </a>
-            <a href="#" aria-label="Ver demonstração">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
-              Demo
-            </a>
-          </div>
-        </article>
+<!-- Card 7 -->
+<article class="project-card reveal">
+  <div class="project-thumb" style="background:linear-gradient(135deg,#1A6B35,#C8302A);">
+    <span class="glyph">🍕</span>
+  </div>
+  <div class="project-top">
+    <span class="status-pill"><span class="status-dot on"></span>Concluído</span>
+    <span class="project-year">2026</span>
+  </div>
+  <div class="project-body">
+    <h3>Supreme Pizzaria Artesanal</h3>
+    <p>Site institucional e cardápio digital para uma pizzaria real, com carrinho de pedido completo (tamanhos, sabores, adicionais) e envio formatado direto pelo WhatsApp.</p>
+    <div class="project-tags"><span>Web App</span><span>Frontend</span><span>Cliente Real</span></div>
+    <div class="project-tech">
+      <span class="badge">HTML5</span>
+      <span class="badge">CSS3</span>
+      <span class="badge">JavaScript</span>
+    </div>
+  </div>
+  <div class="project-links">
+    <a href="https://github.com/Copy-Ntc/SupremePizzaria" target="_blank" rel="noopener" aria-label="Ver código no GitHub">
+      <svg viewBox="0 0 24 24" fill="currentColor" class="icon-sm"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.32 9.32 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
+      GitHub
+    </a>
+    <a href="https://copy-ntc.github.io/SupremePizzaria/" target="_blank" rel="noopener" aria-label="Ver demonstração">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+      Demo
+    </a>
+  </div>
+</article>
+
 
       </div>
     </div>
@@ -1328,15 +1273,15 @@ html, body{ max-width: 100%; overflow-x: hidden; }
               <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
               <span><span class="label">EMAIL</span><span class="value">jseleandr@gmail.com</span></span>
             </a>
-            <a href="https://www.linkedin.com/in/jose-leandrosj" class="contact-method">
+            <a href="https://www.linkedin.com/in/jose-leandrosj" target="_blank" rel="noopener" class="contact-method">
               <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>
               <span><span class="label">LINKEDIN</span><span class="value">www.linkedin.com/in/jose-leandrosj</span></span>
             </a>
-            <a href="https://github.com/Copy-Ntc" class="contact-method">
+            <a href="https://github.com/Copy-Ntc"target="_blank" rel="noopener" class="contact-method">
               <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor" class="icon-sm"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.32 9.32 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></span>
               <span><span class="label">GITHUB</span><span class="value">github.com/Copy-Ntc</span></span>
             </a>
-            <a href="https://www.google.com/maps/place/Brasil" class="contact-method">
+            <a href="https://www.google.com/maps/place/Brasil" target="_blank" rel="noopener" class="contact-method">
               <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
               <span><span class="label">LOCALIZAÇÃO</span><span class="value">Brasil · Remoto</span></span>
             </a>
@@ -1403,10 +1348,10 @@ html, body{ max-width: 100%; overflow-x: hidden; }
     <div class="footer-bottom">
       <p>© <span id="year"></span> José Leandro de Siqueira Junior. Todos os direitos reservados.</p>
       <div class="footer-social">
-        <a href="https://github.com/Copy-Ntc" aria-label="GitHub">
+        <a href="https://github.com/Copy-Ntc" target="_blank" rel="noopener" aria-label="GitHub">
           <svg viewBox="0 0 24 24" fill="currentColor" class="icon-sm"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.32 9.32 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
         </a>
-        <a href="https://www.linkedin.com/in/jose-leandrosj" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/jose-leandrosj" target="_blank" rel="noopener" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
         </a>
         <a href="mailto:jseleandr@gmail.com" aria-label="Email">
