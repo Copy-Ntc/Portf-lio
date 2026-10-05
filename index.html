@@ -492,22 +492,6 @@ section{ padding: var(--section-pad) 0; position: relative; }
 }
 a.article-link:hover{ border-color: var(--accent); background: var(--accent-dim); }
 .article-link .lang{ font-family: var(--font-mono); font-size:11px; color: var(--text-3); flex-shrink:0; }
-.is-placeholder{
-  border-style: dashed;
-  border-color: var(--border-strong);
-  color: var(--text-3);
-  font-weight: 400;
-}
-.dash-frame{
-  border:1px solid var(--border); border-radius: var(--radius-s);
-  overflow:hidden; background: var(--bg-soft);
-}
-.dash-frame img{ width:100%; height:auto; }
-.dash-frame.is-placeholder{
-  aspect-ratio: 16 / 10;
-  display:flex; align-items:center; justify-content:center; text-align:center;
-  padding: 20px; font-family: var(--font-mono); font-size: 12.5px;
-}
 .content-card .project-tech{ margin-top:auto; }
 
 .projects-grid{
@@ -1003,9 +987,6 @@ html, body{ max-width: 100%; overflow-x: hidden; }
             <h3>Dashboards de dados do HackTown 2026</h3>
             <p>Em um contrato temporário de 2 semanas, organizei e tratei cerca de 50 mil linhas de dados sobre palestras, visitantes e palestrantes e desenvolvi dashboards web para apresentar os dados do evento a empresas e patrocinadores.</p>
           </div>
-          <!-- TODO: salvar a captura do dashboard (dados anonimizados) em assets/hacktown-2026-dashboard.png e trocar o placeholder abaixo por:
-               <div class="dash-frame"><img src="assets/hacktown-2026-dashboard.png" alt="Dashboard de dados do HackTown 2026 com dados anonimizados" loading="lazy"></div> -->
-          <div class="dash-frame is-placeholder">Captura do dashboard em breve (dados anonimizados)</div>
           <div class="project-tech">
             <span class="badge">Tratamento de dados</span>
             <span class="badge">HTML</span>
