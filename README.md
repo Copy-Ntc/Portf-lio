@@ -1,14 +1,15 @@
 # Portfólio — José Leandro de Siqueira Junior
 
-Site pessoal para apresentar minha trajetória, projetos e formação em tecnologia.
+Site pessoal para apresentar minha trajetória em conteúdo, comunidade, dados e tecnologia.
 Construído do zero em HTML, CSS e JavaScript puros, sem frameworks ou build step,
-um único arquivo, fácil de hospedar em qualquer lugar.
+em um único arquivo, fácil de hospedar em qualquer lugar.
 
 ## Sobre o projeto
 
-Este portfólio foi pensado pra ir além de uma lista de tecnologias: o objetivo é
-mostrar organização, versatilidade e vontade de aprender três coisas que, na
-minha visão, dizem mais sobre um profissional do que uma lista de frameworks.
+Sou estudante de Engenharia de Software e busco atuar em marketing e comunicação
+digital (social media, conteúdo e comunidade), sem abandonar a base técnica. O
+portfólio mostra esse caminho: artigos, comunidade e dados primeiro, com os
+projetos de código como base.
 
 O design segue uma identidade visual escura, minimalista, com azul como cor de
 destaque, inspirada em produtos como GitHub, Vercel e Linear.
@@ -17,11 +18,12 @@ destaque, inspirada em produtos como GitHub, Vercel e Linear.
 
 - **Hero** — apresentação rápida, com um cartão animado no estilo `perfil.json`
 - **Sobre mim** — formação, trajetória e objetivo profissional atual
-- **Tecnologias** — linguagens, ferramentas e áreas de atuação, organizadas por categoria
-- **Projetos** — cards com descrição, tecnologias usadas, ano, status e links para código/demo
+- **Habilidades** — conteúdo e comunidade, dados e digital
+- **Conteúdo e comunidade** — artigos do blog do GoLive e dashboards do HackTown 2026
+- **Projetos de código** — cards com descrição, tecnologias usadas, ano, status e links para código/demo
 - **Experiência** — linha do tempo profissional
-- **Certificados & Formação** — cursos concluídos e formação em andamento (Inatel)
-- **Currículo** — link direto para download do PDF
+- **Certificados e formação** — cursos concluídos e formação em andamento (Inatel)
+- **Currículo** — download direto do PDF (`assets/Curriculo_Jose_Leandro.pdf`)
 - **Contato** — formulário (via `mailto:`) e canais diretos
 
 ## Tecnologias utilizadas
@@ -50,7 +52,7 @@ Recursos implementados:
 
 ## Contato
 
-- **Email:** jseleandr@gmail.com
+- **E-mail:** jseleandr@gmail.com
 - **LinkedIn:** www.linkedin.com/in/jose-leandrosj
 - **GitHub:**  https://github.com/Copy-Ntc
 

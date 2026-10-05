@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>José Leandro — Portfólio</title>
-<meta name="description" content="Portfólio de José Leandro de Siqueira Junior, estudante de Engenharia de Software com experiência em desenvolvimento, automação e programação. Conheça projetos, tecnologias e trajetória.">
+<meta name="description" content="Portfólio de José Leandro de Siqueira Junior, estudante de Engenharia de Software que une tecnologia, dados e comunicação, com foco em marketing e comunicação digital: conteúdo, comunidade e social media.">
 <meta name="theme-color" content="#08090B">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://copy-ntc.github.io/Portf-lio/">
 <meta property="og:site_name" content="José Leandro — Portfólio">
 <meta property="og:title" content="José Leandro — Portfólio">
-<meta property="og:description" content="Estudante de Engenharia de Software em busca de novas oportunidades. Conheça projetos, tecnologias e trajetória.">
+<meta property="og:description" content="Estudante de Engenharia de Software que une tecnologia, dados e comunicação, com foco em marketing e comunicação digital.">
 <meta property="og:image" content="https://copy-ntc.github.io/Portf-lio/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -19,7 +19,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="José Leandro de Siqueira Junior — Portfólio">
-<meta name="twitter:description" content="Estudante de Engenharia de Software em busca de novas oportunidades. Conheça projetos, tecnologias e trajetória.">
+<meta name="twitter:description" content="Estudante de Engenharia de Software que une tecnologia, dados e comunicação, com foco em marketing e comunicação digital.">
 <meta name="twitter:image" content="https://copy-ntc.github.io/Portf-lio/assets/og-image.png">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2308090B'/%3E%3Ctext x='50' y='66' font-family='monospace' font-size='52' font-weight='700' fill='%233B82F6' text-anchor='middle'%3EJ%3C/text%3E%3C/svg%3E">
@@ -125,6 +125,12 @@ section{ padding: var(--section-pad) 0; position: relative; }
   border-radius: 50%;
   background: var(--accent);
   box-shadow: 0 0 0 3px var(--accent-dim);
+}
+.eyebrow .file{
+  font-size: 11.5px;
+  color: var(--text-3);
+  padding-left: 10px;
+  border-left: 1px solid var(--border-strong);
 }
 
 .section-head{
@@ -289,7 +295,7 @@ section{ padding: var(--section-pad) 0; position: relative; }
 .nav-toggle.open span:nth-child(2){ opacity:0; }
 .nav-toggle.open span:nth-child(3){ transform: translateY(-5.5px) rotate(-45deg); }
 
-@media (max-width: 900px){
+@media (max-width: 1100px){
   .nav-links{
     position:absolute; top: 68px; left:16px; right:16px;
     flex-direction:column; align-items:stretch; gap:2px;
@@ -439,13 +445,13 @@ section{ padding: var(--section-pad) 0; position: relative; }
   background: var(--surface);
 }
 .fact-item{
-  display:flex; justify-content:space-between; align-items:center;
+  display:flex; justify-content:space-between; align-items:center; gap: 16px;
   padding: 18px 22px;
   border-bottom: 1px solid var(--border);
   font-size: 14.5px;
 }
 .fact-item:last-child{ border-bottom:none; }
-.fact-item .label{ color: var(--text-3); font-family: var(--font-mono); font-size:12.5px; }
+.fact-item .label{ color: var(--text-3); font-family: var(--font-mono); font-size:12.5px; flex-shrink:0; }
 .fact-item .value{ color: var(--text-1); font-weight:500; text-align:right; }
 
 .tech-groups{ display:flex; flex-direction:column; gap: 34px; }
@@ -454,6 +460,55 @@ section{ padding: var(--section-pad) 0; position: relative; }
   margin-bottom: 14px; letter-spacing:.02em;
 }
 .tech-badges{ display:flex; flex-wrap:wrap; gap:10px; }
+
+.content-grid{
+  display:grid; grid-template-columns: repeat(2, 1fr); gap: 26px;
+}
+@media (max-width: 900px){ .content-grid{ grid-template-columns: 1fr; } }
+.content-card{
+  border:1px solid var(--border);
+  border-radius: var(--radius-m);
+  background: var(--surface);
+  padding: 28px;
+  display:flex; flex-direction:column; gap:18px;
+  transition: border-color .3s var(--ease);
+}
+.content-card:hover{ border-color: var(--border-strong); }
+.content-card-top{ display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+.content-org{ font-family: var(--font-mono); font-size:12px; color: var(--text-3); }
+.content-card h3{ font-size: 19px; margin-bottom: 8px; }
+.content-card p{ color: var(--text-2); font-size: 14.5px; line-height:1.65; }
+.content-subtitle{
+  font-family: var(--font-mono); font-size: 12px; color: var(--text-3);
+  letter-spacing:.02em; margin-bottom: 10px;
+}
+.article-list{ display:flex; flex-direction:column; gap:8px; }
+.article-link{
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  padding: 12px 14px;
+  border:1px solid var(--border); border-radius: var(--radius-s);
+  font-size: 14px; font-weight:500; color: var(--text-1);
+  transition: border-color .2s ease, background .2s ease;
+}
+a.article-link:hover{ border-color: var(--accent); background: var(--accent-dim); }
+.article-link .lang{ font-family: var(--font-mono); font-size:11px; color: var(--text-3); flex-shrink:0; }
+.is-placeholder{
+  border-style: dashed;
+  border-color: var(--border-strong);
+  color: var(--text-3);
+  font-weight: 400;
+}
+.dash-frame{
+  border:1px solid var(--border); border-radius: var(--radius-s);
+  overflow:hidden; background: var(--bg-soft);
+}
+.dash-frame img{ width:100%; height:auto; }
+.dash-frame.is-placeholder{
+  aspect-ratio: 16 / 10;
+  display:flex; align-items:center; justify-content:center; text-align:center;
+  padding: 20px; font-family: var(--font-mono); font-size: 12.5px;
+}
+.content-card .project-tech{ margin-top:auto; }
 
 .projects-grid{
   display:grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
@@ -773,7 +828,8 @@ html, body{ max-width: 100%; overflow-x: hidden; }
 
     <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
       <a href="#sobre" data-nav><span class="dot"></span>Sobre</a>
-      <a href="#tecnologias" data-nav><span class="dot"></span>Tecnologias</a>
+      <a href="#habilidades" data-nav><span class="dot"></span>Habilidades</a>
+      <a href="#conteudo" data-nav><span class="dot"></span>Conteúdo</a>
       <a href="#projetos" data-nav><span class="dot"></span>Projetos</a>
       <a href="#experiencia" data-nav><span class="dot"></span>Experiência</a>
       <a href="#certificados" data-nav><span class="dot"></span>Certificados</a>
@@ -791,29 +847,28 @@ html, body{ max-width: 100%; overflow-x: hidden; }
 
 <main id="hero">
 
-  <section class="hero-section">
+  <section class="hero-section hero">
     <div class="hero-glow" aria-hidden="true"></div>
     <div class="container hero-grid">
 
       <div class="reveal in-view">
         <div class="hero-kicker">
           <span class="status-dot on"></span>
-          Disponível para novas oportunidades
+          Buscando oportunidades em marketing e comunicação digital
         </div>
         <h1>José Leandro de <span>Siqueira Junior</span></h1>
-        <br>
-        <p class="desc">Sou apaixonado por tecnologia e desenvolvimento de soluções que tornam processos mais simples, eficientes e intuitivos. Tenho experiência prática com desenvolvimento de software, automação, programação e projetos pessoais, buscando constantemente aprender novas tecnologias e evoluir profissionalmente.</p>
-        <br>
+        <p class="role">Estudante de Engenharia de Software · Inatel</p>
+        <p class="desc">Uno tecnologia, dados e comunicação. Escrevo artigos para o blog do GoLive em três idiomas, ajudo a administrar uma comunidade de cerca de 20 mil pessoas no Discord e já transformei a base de dados de um festival em dashboards para patrocinadores. Agora quero levar essa mistura para social media, conteúdo e comunidade, sem largar a base técnica.</p>
         <div class="hero-ctas">
-          <a href="#projetos" class="btn btn-primary">Conheça meus projetos</a>
-          <a href="#curriculo" class="btn btn-secondary">Baixar currículo</a>
+          <a href="#conteudo" class="btn btn-primary">Ver meu trabalho</a>
+          <a href="assets/Curriculo_Jose_Leandro.pdf" download class="btn btn-secondary">Baixar currículo</a>
           <a href="#contato" class="btn btn-ghost">Entrar em contato <span class="arrow">→</span></a>
         </div>
 
         <div class="hero-stats">
-          <div><strong>2+</strong>anos de prática</div>
-          <div><strong>6</strong>projetos publicados</div>
-          <div><strong>15+</strong>tecnologias</div>
+          <div><strong>~20 mil</strong>usuários na comunidade</div>
+          <div><strong>~50 mil</strong>linhas de dados tratadas</div>
+          <div><strong>3</strong>idiomas nos artigos</div>
         </div>
       </div>
 
@@ -833,98 +888,174 @@ html, body{ max-width: 100%; overflow-x: hidden; }
   <section id="sobre" class="section-border">
     <div class="grid-bg" aria-hidden="true"></div>
     <div class="container">
-      <div class="eyebrow">01 — sobre.mdx</div>
+      <div class="eyebrow">01 — Sobre <span class="file">sobre.mdx</span></div>
       <div class="about-grid">
         <div class="about-text reveal">
           <h2 style="font-size:clamp(26px,3.6vw,34px); margin-bottom:22px;">Sobre mim</h2>
-          <p>Sou <strong>José Leandro</strong>, estudante de Engenharia de Software no Inatel, atualmente em busca de uma nova oportunidade profissional. Já atuei em estágio na área de redes móveis, na CIDC/Huawei, onde tive contato prático com tecnologia em um ambiente corporativo.  </p>
-          <p>Estou aberto a oportunidades em diferentes áreas, com o objetivo de me estabilizar profissionalmente enquanto continuo aprendendo. Acredito que ter uma base ampla de conhecimento é um diferencial, por isso busco entender um pouco de tudo e dedico meu tempo livre a estudar programação por conta própria, com interesse especial em desenvolvimento de software.</p>
+          <p>Sou <strong>José Leandro</strong>, estudante de Engenharia de Software no Inatel desde 2025. Hoje trabalho no <strong>GoLive</strong>: escrevo artigos para o blog da plataforma em português, inglês e espanhol e cuido da administração interna da comunidade no Discord. Comecei como voluntário e hoje sou remunerado.</p>
+          <p>No <strong>HackTown</strong>, fui líder de venue em 2025 e voltei em 2026 como gestor de dados, organizando cerca de 50 mil linhas sobre palestras, visitantes e palestrantes e montando dashboards para empresas e patrocinadores. Antes disso, estagiei em redes móveis na CIDC/Huawei, validando instalações e elaborando relatórios em Excel e PowerPoint.</p>
+          <p>Quero atuar em <strong>marketing e comunicação digital</strong>, em frentes como social media, conteúdo e comunidade, sem abandonar a base em tecnologia e dados.</p>
         </div>
 
         <div class="reveal">
           <div class="fact-list">
-            <div class="fact-item"><span class="label">LOCALIZAÇÃO</span><span class="value">Santa rita do sapucaí / MG</span></div>
-            <div class="fact-item"><span class="label">DISPONIBILIDADE</span><span class="value">Aberto a propostas</span></div>
+            <div class="fact-item"><span class="label">LOCALIZAÇÃO</span><span class="value">Natércia – MG</span></div>
+            <div class="fact-item"><span class="label">ÁREA DE INTERESSE</span><span class="value">Marketing e comunicação digital</span></div>
             <div class="fact-item"><span class="label">MODALIDADE</span><span class="value">Remoto / Híbrido</span></div>
-            <div class="fact-item"><span class="label">IDIOMAS</span><span class="value">Português, Inglês</span></div>
-            <div class="fact-item"><span class="label">TRAÇO PRINCIPAL</span><span class="value">Aprendizado rápido</span></div>
+            <div class="fact-item"><span class="label">IDIOMAS</span><span class="value">Português, inglês intermediário, espanhol básico</span></div>
+            <div class="fact-item"><span class="label">FORMAÇÃO</span><span class="value">Engenharia de Software · Inatel</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="tecnologias" class="section-border">
+  <section id="habilidades" class="section-border">
     <div class="container">
-      <div class="eyebrow">02 — stack.ts</div>
+      <div class="eyebrow">02 — Habilidades <span class="file">stack.ts</span></div>
       <div class="section-head">
-        <h2>Tecnologias &amp; ferramentas</h2>
-        <p>Um conjunto versátil de linguagens, frameworks e ferramentas que uso no dia a dia para construir, automatizar e resolver problemas.</p>
+        <h2>Habilidades</h2>
+        <p>Comunicação e comunidade na frente, com dados e tecnologia como base.</p>
       </div>
 
       <div class="tech-groups">
         <div class="reveal">
-          <div class="tech-group-title">LINGUAGENS</div>
+          <div class="tech-group-title">CONTEÚDO E COMUNIDADE</div>
           <div class="tech-badges">
-            <span class="badge">Python</span>
+            <span class="badge">Redação de artigos</span>
+            <span class="badge">Administração de comunidade no Discord</span>
+            <span class="badge">Comunicação interna</span>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="tech-group-title">DADOS</div>
+          <div class="tech-badges">
+            <span class="badge">Tratamento de dados</span>
+            <span class="badge">Dashboards</span>
+            <span class="badge">Excel</span>
+            <span class="badge">PowerPoint</span>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="tech-group-title">DIGITAL</div>
+          <div class="tech-badges">
+            <span class="badge">HTML</span>
+            <span class="badge">CSS</span>
             <span class="badge">JavaScript</span>
-            <span class="badge">TypeScript</span>
-            <span class="badge">SQL</span>
-            <span class="badge">HTML5</span>
-            <span class="badge">CSS3</span>
-          </div>
-        </div>
-
-        <div class="reveal">
-          <div class="tech-group-title">FRONT-END</div>
-          <div class="tech-badges">
             <span class="badge">React</span>
-            <span class="badge">Tailwind CSS</span>
-            <span class="badge">Responsividade / UI</span>
+            <span class="badge">TypeScript</span>
+            <span class="badge">Supabase</span>
+            <span class="badge">Python</span>
+            <span class="badge">Git/GitHub</span>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="reveal">
-          <div class="tech-group-title">BACK-END &amp; AUTOMAÇÃO</div>
-          <div class="tech-badges">
-            <span class="badge">Node.js</span>
-            <span class="badge">APIs REST</span>
-            <span class="badge">Automação de Processos (RPA)</span>
-            <span class="badge">Selenium</span>
-            <span class="badge">Web Scraping</span>
-          </div>
-        </div>
+  <section id="conteudo" class="section-border">
+    <div class="container">
+      <div class="eyebrow">03 — Conteúdo e comunidade <span class="file">conteudo.md</span></div>
+      <div class="section-head">
+        <h2>Conteúdo e comunidade</h2>
+        <p>Textos publicados, comunidade online e dados transformados em algo fácil de apresentar.</p>
+      </div>
 
-        <div class="reveal">
-          <div class="tech-group-title">DADOS &amp; PRODUTIVIDADE</div>
-          <div class="tech-badges">
-            <span class="badge">Excel Avançado</span>
-            <span class="badge">Google Sheets / Apps Script</span>
-          </div>
-        </div>
+      <div class="content-grid">
 
-        <div class="reveal">
-          <div class="tech-group-title">FERRAMENTAS &amp; PLATAFORMAS</div>
-          <div class="tech-badges">
-            <span class="badge">Git &amp; GitHub</span>
-            <span class="badge">VS Code</span>
-            <span class="badge">Linux</span>
-            <span class="badge">Docker (básico)</span>
+        <article class="content-card reveal">
+          <div class="content-card-top">
+            <span class="status-pill"><span class="status-dot on"></span>Atual</span>
+            <span class="content-org">GoLive · desde 08/2026</span>
           </div>
-        </div>
+          <div>
+            <h3>Blog e comunidade do GoLive</h3>
+            <p>Escrevo artigos para o blog da plataforma em português, inglês e espanhol e participo da administração interna da comunidade no Discord, com cerca de 20 mil usuários e média de 10 mil membros ativos.</p>
+          </div>
+          <div>
+            <div class="content-subtitle">ARTIGOS PUBLICADOS</div>
+            <ul class="article-list">
+              <!-- TODO: colar os links dos artigos do blog do GoLive (2 ou 3). Para cada um, trocar o <li> de placeholder por:
+                   <li><a class="article-link" href="URL_DO_ARTIGO" target="_blank" rel="noopener">Título do artigo <span class="lang">PT ↗</span></a></li>
+                   (use PT, EN ou ES no selo de idioma) -->
+              <li><span class="article-link is-placeholder">Artigo 1: link em breve</span></li>
+              <li><span class="article-link is-placeholder">Artigo 2: link em breve</span></li>
+              <li><span class="article-link is-placeholder">Artigo 3: link em breve</span></li>
+            </ul>
+          </div>
+          <div class="project-tech">
+            <span class="badge">Português</span>
+            <span class="badge">Inglês</span>
+            <span class="badge">Espanhol</span>
+            <span class="badge">Discord</span>
+          </div>
+        </article>
+
+        <article class="content-card reveal">
+          <div class="content-card-top">
+            <span class="status-pill"><span class="status-dot on"></span>Concluído</span>
+            <span class="content-org">HackTown 2026 · 09/2026</span>
+          </div>
+          <div>
+            <h3>Dashboards de dados do HackTown 2026</h3>
+            <p>Em um contrato temporário de 2 semanas, organizei e tratei cerca de 50 mil linhas de dados sobre palestras, visitantes e palestrantes e desenvolvi dashboards web para apresentar os dados do evento a empresas e patrocinadores.</p>
+          </div>
+          <!-- TODO: salvar a captura do dashboard (dados anonimizados) em assets/hacktown-2026-dashboard.png e trocar o placeholder abaixo por:
+               <div class="dash-frame"><img src="assets/hacktown-2026-dashboard.png" alt="Dashboard de dados do HackTown 2026 com dados anonimizados" loading="lazy"></div> -->
+          <div class="dash-frame is-placeholder">Captura do dashboard em breve (dados anonimizados)</div>
+          <div class="project-tech">
+            <span class="badge">Tratamento de dados</span>
+            <span class="badge">HTML</span>
+            <span class="badge">CSS</span>
+            <span class="badge">JavaScript</span>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
 
   <section id="projetos" class="section-border">
     <div class="container">
-      <div class="eyebrow">03 — projetos/</div>
+      <div class="eyebrow">04 — Projetos <span class="file">projetos/</span></div>
       <div class="section-head">
-        <h2>Projetos selecionados</h2>
-        <p>Uma seleção de trabalhos pessoais e profissionais de automações a interfaces completas. </p>
+        <h2>Projetos de código</h2>
+        <p>Um site para cliente real e projetos pessoais, de automações a interfaces completas.</p>
       </div>
 
       <div class="projects-grid">
+
+<article class="project-card reveal">
+  <div class="project-thumb" style="background:linear-gradient(135deg,#1A6B35,#C8302A);">
+    <span class="glyph">🍕</span>
+  </div>
+  <div class="project-top">
+    <span class="status-pill"><span class="status-dot on"></span>Concluído</span>
+    <span class="project-year">2026</span>
+  </div>
+  <div class="project-body">
+    <h3>Supreme Pizzaria Artesanal</h3>
+    <p>Presença digital de um negócio local (cliente real): site institucional e cardápio digital da pizzaria, com carrinho de pedido completo (tamanhos, sabores, adicionais) e envio formatado direto pelo WhatsApp.</p>
+    <div class="project-tags"><span>Web app</span><span>Frontend</span><span>Cliente real</span></div>
+    <div class="project-tech">
+      <span class="badge">HTML5</span>
+      <span class="badge">CSS3</span>
+      <span class="badge">JavaScript</span>
+    </div>
+  </div>
+  <div class="project-links">
+    <a href="https://github.com/Copy-Ntc/SupremePizzaria" target="_blank" rel="noopener" aria-label="Ver código no GitHub">
+      <svg viewBox="0 0 24 24" fill="currentColor" class="icon-sm"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.32 9.32 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
+      GitHub
+    </a>
+    <a href="https://copy-ntc.github.io/SupremePizzaria/" target="_blank" rel="noopener" aria-label="Ver demonstração">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+      Demo
+    </a>
+  </div>
+</article>
 
 <article class="project-card reveal">
   <div class="project-thumb" style="background:linear-gradient(135deg,#DC2626,#3B82F6);">
@@ -965,7 +1096,7 @@ html, body{ max-width: 100%; overflow-x: hidden; }
     <span class="project-year">2026</span>
   </div>
   <div class="project-body">
-    <h3>Automação de Relatório Financeiro</h3>
+    <h3>Automação de relatório financeiro</h3>
 <p>Script em Python que lê uma planilha de lançamentos e gera automaticamente um relatório em Excel formatado, com totais por categoria, por mês e gráfico, usando fórmulas nativas, não valores fixos.</p>
     <div class="project-tags"><span>Automação</span><span>Backend</span><span>Dados</span></div>
     <div class="project-tech">
@@ -997,7 +1128,7 @@ html, body{ max-width: 100%; overflow-x: hidden; }
   <div class="project-body">
     <h3>To-Do List Web</h3>
     <p>Lista de tarefas simples e sem dependências, com filtros, contador em tempo real e tudo salvo automaticamente no navegador, sem precisar de backend.</p>
-    <div class="project-tags"><span>Web App</span><span>Frontend</span></div>
+    <div class="project-tags"><span>Web app</span><span>Frontend</span></div>
     <div class="project-tech">
       <span class="badge">HTML5</span>
       <span class="badge">CSS3</span>
@@ -1025,9 +1156,9 @@ html, body{ max-width: 100%; overflow-x: hidden; }
     <span class="project-year">2026</span>
   </div>
   <div class="project-body">
-    <h3>Web Scraper de Livros</h3>
+    <h3>Web scraper de livros</h3>
     <p>Script em Python que coleta título, preço, avaliação e disponibilidade de um catálogo de livros e exporta os dados para CSV, com controle de intervalo entre requisições e tratamento de erros de rede.</p>
-    <div class="project-tags"><span>Automação</span><span>Dados</span><span>Web Scraping</span></div>
+    <div class="project-tags"><span>Automação</span><span>Dados</span><span>Web scraping</span></div>
     <div class="project-tech">
       <span class="badge">Python</span>
       <span class="badge">Requests</span>
@@ -1055,7 +1186,7 @@ html, body{ max-width: 100%; overflow-x: hidden; }
     <span class="project-year">2026</span>
   </div>
   <div class="project-body">
-    <h3>Conversor de Unidades — CLI</h3>
+    <h3>Conversor de unidades (CLI)</h3>
     <p>Ferramenta de linha de comando para converter valores entre comprimento, peso, volume e temperatura, com modo interativo e 15 testes automatizados cobrindo os cálculos e os erros de uso.</p>
     <div class="project-tags"><span>CLI</span><span>Produtividade</span><span>Testes</span></div>
     <div class="project-tech">
@@ -1075,38 +1206,6 @@ html, body{ max-width: 100%; overflow-x: hidden; }
   </div>
 </article>
 
-
-<article class="project-card reveal">
-  <div class="project-thumb" style="background:linear-gradient(135deg,#1A6B35,#C8302A);">
-    <span class="glyph">🍕</span>
-  </div>
-  <div class="project-top">
-    <span class="status-pill"><span class="status-dot on"></span>Concluído</span>
-    <span class="project-year">2026</span>
-  </div>
-  <div class="project-body">
-    <h3>Supreme Pizzaria Artesanal</h3>
-    <p>Site institucional e cardápio digital para uma pizzaria real, com carrinho de pedido completo (tamanhos, sabores, adicionais) e envio formatado direto pelo WhatsApp.</p>
-    <div class="project-tags"><span>Web App</span><span>Frontend</span><span>Cliente Real</span></div>
-    <div class="project-tech">
-      <span class="badge">HTML5</span>
-      <span class="badge">CSS3</span>
-      <span class="badge">JavaScript</span>
-    </div>
-  </div>
-  <div class="project-links">
-    <a href="https://github.com/Copy-Ntc/SupremePizzaria" target="_blank" rel="noopener" aria-label="Ver código no GitHub">
-      <svg viewBox="0 0 24 24" fill="currentColor" class="icon-sm"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.32 9.32 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
-      GitHub
-    </a>
-    <a href="https://copy-ntc.github.io/SupremePizzaria/" target="_blank" rel="noopener" aria-label="Ver demonstração">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
-      Demo
-    </a>
-  </div>
-</article>
-
-
       </div>
     </div>
   </section>
@@ -1114,7 +1213,7 @@ html, body{ max-width: 100%; overflow-x: hidden; }
 
   <section id="experiencia" class="section-border">
     <div class="container">
-      <div class="eyebrow">04 — experiencia.log</div>
+      <div class="eyebrow">05 — Experiência <span class="file">experiencia.log</span></div>
       <div class="section-head">
         <h2>Experiência profissional</h2>
       </div>
@@ -1122,37 +1221,77 @@ html, body{ max-width: 100%; overflow-x: hidden; }
       <div class="timeline">
         <div class="timeline-item current reveal">
           <div class="timeline-dot"></div>
-          <div class="timeline-period">2025 — 2026</div>
-          <h3>Estágio em Redes Móveis</h3>
-          <div class="timeline-org">CIDC/Huawei</div>
+          <div class="timeline-period">08/2026 — atual</div>
+          <h3>Marketing e Administração</h3>
+          <div class="timeline-org">GoLive</div>
           <ul>
-            <li>Validação da qualidade de instalações em estações rádio-base.</li>
-            <li>Análise técnica de antenas, cabos ópticos, cabos RF e controladoras.</li>
-            <li>Elaboração de relatórios técnicos e documentação de atividades.</li>
-            <li>Acompanhamento de processos relacionados à infraestrutura de telecomunicações</li>
-        
-      
+            <li>Produção de artigos para o blog da plataforma em português, inglês e espanhol. A atividade começou de forma voluntária e hoje é remunerada.</li>
+            <li>Administração interna da comunidade da plataforma no Discord, com cerca de 20 mil usuários e média de 10 mil membros ativos.</li>
           </ul>
           <div class="timeline-tech">
-            <span class="badge">Documentação Técnica</span>
-            <span class="badge">Excel</span>
-            <span class="badge">Datalink / CIDC / ISDP</span>
-            <span class="badge">Sistemas Corporativos</span>
+            <span class="badge">Redação de artigos</span>
+            <span class="badge">Discord</span>
+            <span class="badge">Comunidade</span>
           </div>
         </div>
 
         <div class="timeline-item reveal">
           <div class="timeline-dot"></div>
-       
+          <div class="timeline-period">09/2026 · contrato temporário de 2 semanas</div>
+          <h3>Gestor de Dados de Venues</h3>
+          <div class="timeline-org">HackTown 2026</div>
+          <ul>
+            <li>Organização e tratamento de cerca de 50 mil linhas de dados sobre palestras, visitantes e palestrantes dos venues, incluindo região e perfil profissional do público.</li>
+            <li>Desenvolvimento de dashboards web (HTML, CSS e JavaScript) para apresentar os dados do evento a empresas e patrocinadores.</li>
+            <li>Comunicação interna com a equipe do evento, incluindo a divulgação das gravações dos treinamentos e do formulário de feedback.</li>
+          </ul>
+          <div class="timeline-tech">
+            <span class="badge">Tratamento de dados</span>
+            <span class="badge">Dashboards</span>
+            <span class="badge">HTML</span>
+            <span class="badge">CSS</span>
+            <span class="badge">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-period">09/2025 — 09/2026</div>
+          <h3>Estágio em Redes Móveis</h3>
+          <div class="timeline-org">CIDC/Huawei (Inatel)</div>
+          <ul>
+            <li>Validação e análise técnica de instalações em estações rádio-base, com suporte às equipes de campo.</li>
+            <li>Análise de antenas, cabos ópticos, cabos RF e controladoras.</li>
+            <li>Elaboração de relatórios e acompanhamento de resultados em Excel e PowerPoint.</li>
+          </ul>
+          <div class="timeline-tech">
+            <span class="badge">Excel</span>
+            <span class="badge">PowerPoint</span>
+            <span class="badge">Documentação técnica</span>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-period">07/2025 — 08/2025</div>
+          <h3>Líder de Venue</h3>
+          <div class="timeline-org">HackTown 2025</div>
+          <ul>
+            <li>Apoio à organização de um venue (espaço de programação) do festival, orientando participantes e dando suporte à equipe.</li>
+            <li>Comunicação direta com público e equipe durante o evento ao vivo.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
  
   <section id="certificados" class="section-border">
     <div class="container">
-      <div class="eyebrow">05 — certificados/</div>
+      <div class="eyebrow">06 — Formação <span class="file">certificados/</span></div>
       <div class="section-head">
-        <h2>Certificados &amp; formação</h2>
-        <p>Cursos e certificações que sustentam minha atuação técnica.</p>
+        <h2>Certificados e formação</h2>
+        <p>Graduação, cursos e certificações que formam minha base técnica.</p>
       </div>
 
 <div class="cert-card cert-card-featured reveal">
@@ -1167,7 +1306,7 @@ html, body{ max-width: 100%; overflow-x: hidden; }
     </div>
   </div>
   <div class="cert-meta">
-    <span>2025 — atual</span>
+    <span>02/2025 — previsão 12/2029</span>
     <a href="https://www.inatel.br" target="_blank" rel="noopener">Site oficial ↗</a>
   </div>
 </div>
@@ -1182,7 +1321,7 @@ html, body{ max-width: 100%; overflow-x: hidden; }
             <p class="cert-issuer">CIDC/Huawei</p>
           </div>
           <div class="cert-meta">
-            <span>2025</span>
+            <span>09/2025</span>
             <a href="assets/PrePosition Competence Certification for Maintenance service (Partner).pdf" target="_blank" rel="noopener noreferrer">Ver credencial ↗</a>
           </div>
         </div>
@@ -1196,7 +1335,7 @@ html, body{ max-width: 100%; overflow-x: hidden; }
             <p class="cert-issuer">CIDC/Huawei</p>
           </div>
           <div class="cert-meta">
-            <span>2025</span>
+            <span>09/2025</span>
             <a href="assets/Cyber Security Certificate for Service Work.pdf" target="_blank" rel="noopener noreferrer">Ver credencial ↗</a>
           </div>
         </div>
@@ -1210,13 +1349,24 @@ html, body{ max-width: 100%; overflow-x: hidden; }
             <p class="cert-issuer">CIDC/Huawei</p>
           </div>
           <div class="cert-meta">
-            <span>2025</span>
+            <span>09/2025</span>
             <a href="assets/远程交付上岗证.pdf" target="_blank" rel="noopener noreferrer">Ver credencial ↗</a>
           </div>
         </div>
 
-
-      
+        <div class="cert-card reveal">
+          <div class="cert-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm" style="width:20px;height:20px;"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
+          </div>
+          <div>
+            <h3>HTML, CSS e JavaScript</h3>
+            <p class="cert-issuer">Fundação Bradesco</p>
+          </div>
+          <div class="cert-meta">
+            <span>05/2026</span>
+            <!-- TODO: se tiver o certificado em PDF, salvar em assets/ e adicionar aqui um link "Ver credencial ↗" -->
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1224,7 +1374,7 @@ html, body{ max-width: 100%; overflow-x: hidden; }
  
   <section id="curriculo" class="section-border">
     <div class="container">
-      <div class="eyebrow">06 — curriculo.pdf</div>
+      <div class="eyebrow">07 — Currículo <span class="file">curriculo.pdf</span></div>
       <div class="resume-card reveal">
         <div style="display:flex; align-items:center; gap:24px;">
           <div class="resume-icon">
@@ -1232,10 +1382,10 @@ html, body{ max-width: 100%; overflow-x: hidden; }
           </div>
           <div class="resume-left">
             <h2>Currículo completo</h2>
-            <p>Baixe o PDF com meu histórico profissional detalhado, formação e principais competências técnicas.</p>
+            <p>Baixe o PDF com minha experiência, formação, competências e idiomas.</p>
           </div>
         </div>
-        <a href="assets/curriculo.pdf" download class="btn btn-primary" style="position:relative;z-index:1;">
+        <a href="assets/Curriculo_Jose_Leandro.pdf" download class="btn btn-primary" style="position:relative;z-index:1;">
           Baixar PDF
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
         </a>
@@ -1246,10 +1396,10 @@ html, body{ max-width: 100%; overflow-x: hidden; }
  
   <section id="contato" class="section-border">
     <div class="container">
-      <div class="eyebrow">07 — contato.tsx</div>
+      <div class="eyebrow">08 — Contato <span class="file">contato.tsx</span></div>
       <div class="section-head">
         <h2>Vamos conversar</h2>
-        <p>Está com um projeto em mente ou uma oportunidade para conversar? Me envie uma mensagem, respondo o mais rápido possível.</p>
+        <p>Tem uma vaga, um projeto ou uma ideia para conversar? Me envie uma mensagem e eu respondo o mais rápido possível.</p>
       </div>
 
       <div class="contact-grid">
@@ -1258,19 +1408,19 @@ html, body{ max-width: 100%; overflow-x: hidden; }
           <div class="contact-methods">
             <a href="mailto:jseleandr@gmail.com" class="contact-method">
               <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
-              <span><span class="label">EMAIL</span><span class="value">jseleandr@gmail.com</span></span>
+              <span><span class="label">E-MAIL</span><span class="value">jseleandr@gmail.com</span></span>
             </a>
             <a href="https://www.linkedin.com/in/jose-leandrosj" target="_blank" rel="noopener" class="contact-method">
               <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>
               <span><span class="label">LINKEDIN</span><span class="value">www.linkedin.com/in/jose-leandrosj</span></span>
             </a>
-            <a href="https://github.com/Copy-Ntc"target="_blank" rel="noopener" class="contact-method">
+            <a href="https://github.com/Copy-Ntc" target="_blank" rel="noopener" class="contact-method">
               <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor" class="icon-sm"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.32 9.32 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></span>
               <span><span class="label">GITHUB</span><span class="value">github.com/Copy-Ntc</span></span>
             </a>
-            <a href="https://www.google.com/maps/place/Brasil" target="_blank" rel="noopener" class="contact-method">
+            <a href="https://www.google.com/maps/place/Nat%C3%A9rcia+-+MG" target="_blank" rel="noopener" class="contact-method">
               <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
-              <span><span class="label">LOCALIZAÇÃO</span><span class="value">Brasil · Remoto</span></span>
+              <span><span class="label">LOCALIZAÇÃO</span><span class="value">Natércia – MG</span></span>
             </a>
           </div>
         </div>
@@ -1283,7 +1433,7 @@ html, body{ max-width: 100%; overflow-x: hidden; }
                 <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
               </div>
               <div class="field">
-                <label for="email">Email</label>
+                <label for="email">E-mail</label>
                 <input type="email" id="email" name="email" placeholder="voce@email.com" required>
               </div>
             </div>
@@ -1317,13 +1467,14 @@ html, body{ max-width: 100%; overflow-x: hidden; }
         <div class="footer-col">
           <h4>NAVEGAÇÃO</h4>
           <a href="#sobre">Sobre</a>
+          <a href="#conteudo">Conteúdo</a>
           <a href="#projetos">Projetos</a>
           <a href="#experiencia">Experiência</a>
           <a href="#contato">Contato</a>
         </div>
         <div class="footer-col">
           <h4>RECURSOS</h4>
-          <a href="#tecnologias">Tecnologias</a>
+          <a href="#habilidades">Habilidades</a>
           <a href="#certificados">Certificados</a>
           <a href="#curriculo">Currículo</a>
         </div>
@@ -1339,7 +1490,7 @@ html, body{ max-width: 100%; overflow-x: hidden; }
         <a href="https://www.linkedin.com/in/jose-leandrosj" target="_blank" rel="noopener" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
         </a>
-        <a href="mailto:jseleandr@gmail.com" aria-label="Email">
+        <a href="mailto:jseleandr@gmail.com" aria-label="E-mail">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
         </a>
       </div>
@@ -1435,17 +1586,22 @@ html, body{ max-width: 100%; overflow-x: hidden; }
     { pre: '{', indent: 0 },
     { k: 'nome', v: '"José Leandro de Siqueira Junior"', indent: 1 },
     { k: 'cargo', v: '"Estudante de Engenharia de Software"', indent: 1 },
-    { k: 'foco', v: '["Aprendizado contínuo", "Tecnologia", "Novas oportunidades"]', indent: 1 },
-    { k: 'status', v: '"disponível"', indent: 1 },
+    { k: 'foco', v: '["Social Media", "Conteúdo", "Comunidade", "Dados"]', indent: 1 },
+    { k: 'local', v: '"Natércia – MG"', indent: 1 },
     { pre: '}', indent: 0 }
   ];
 
+  function comma(i){
+    var next = jsonLines[i + 1];
+    return next && next.pre ? '' : ',';
+  }
+
   function renderStaticJSON(){
     var html = '';
-    jsonLines.forEach(function(line){
+    jsonLines.forEach(function(line, i){
       var pad = '  '.repeat(line.indent);
       if(line.pre){ html += pad + line.pre + '\n'; return; }
-      html += pad + '<span class="k">"' + line.k + '"</span>: ' + line.v + ',\n';
+      html += pad + '<span class="k">"' + line.k + '"</span>: ' + line.v + comma(i) + '\n';
     });
     typerTarget.innerHTML = html;
   }
@@ -1454,10 +1610,10 @@ html, body{ max-width: 100%; overflow-x: hidden; }
     var i = 0;
     typerTarget.innerHTML = '';
     var full = [];
-    jsonLines.forEach(function(line){
+    jsonLines.forEach(function(line, i){
       var pad = '  '.repeat(line.indent);
       if(line.pre){ full.push(pad + line.pre); return; }
-      full.push(pad + '"' + line.k + '": ' + line.v + ',');
+      full.push(pad + '"' + line.k + '": ' + line.v + comma(i));
     });
 
     var lineIndex = 0, charIndex = 0;
@@ -1528,19 +1684,19 @@ function colorize(text){
     var subject = encodeURIComponent('Contato via portfólio — ' + subjectField);
     var body = encodeURIComponent(
       'Nome: ' + name + '\n' +
-      'Email para retorno: ' + email + '\n\n' +
+      'E-mail para retorno: ' + email + '\n\n' +
       message
     );
     var mailtoLink = 'mailto:' + DEST_EMAIL + '?subject=' + subject + '&body=' + body;
 
-    submitBtn.textContent = 'Abrindo seu email...';
+    submitBtn.textContent = 'Abrindo seu e-mail...';
     submitBtn.disabled = true;
 
     var tempLink = document.createElement('a');
     tempLink.href = mailtoLink;
     tempLink.click();
 
-    status.innerHTML = '✓ Seu aplicativo de email deve abrir com a mensagem pronta. Se nada acontecer, escreva direto para <a href="mailto:' + DEST_EMAIL + '" style="color:var(--accent-2); text-decoration:underline;">' + DEST_EMAIL + '</a>.';
+    status.innerHTML = '✓ Seu aplicativo de e-mail deve abrir com a mensagem pronta. Se nada acontecer, escreva direto para <a href="mailto:' + DEST_EMAIL + '" style="color:var(--accent-2); text-decoration:underline;">' + DEST_EMAIL + '</a>.';
     status.classList.add('ok');
 
     setTimeout(function(){
